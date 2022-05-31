@@ -44,6 +44,12 @@ function getMascaraCNPJ(cnpj) {
     + "-" + cnpj.substring(12, 14);
 }
 
+function copiarCNPJ() {
+  let cnpj = document.getElementById("cnpj").textContent;
+  navigator.clipboard.writeText(cnpj.substring(5));
+  alert("CNPJ copiado!");
+}
+
 function getUF(cUF) {
   switch (cUF) {
     case "12":
